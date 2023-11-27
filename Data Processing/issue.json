@@ -1,0 +1,360 @@
+{
+    "Class": {
+        "basic_information_data": [
+            {
+                "key": "Bedroom",
+                "description": "A room within a dwelling intended primarily for sleeping"
+            },
+            {
+                "key": "Bathroom",
+                "description": "A room containing a bathtub or shower and typically also a toilet"
+            },
+            {
+                "key": "Property types",
+                "description": "Categories of real estate such as residential, commercial, or industrial"
+            },
+            {
+                "key": "Type of title",
+                "description": "The legal documentation proving ownership of a property, such as freehold or leasehold"
+            },
+            {
+                "key": "Selling method",
+                "description": "The strategy used to sell property, including auction, private treaty, or expression of interest"
+            },
+            {
+                "key": "Floor area",
+                "description": "The total usable surface area within a building, measured in square feet or meters"
+            },
+            {
+                "key": "Land area",
+                "description": "The measure of a plot of land surface"
+            },
+            {
+                "key": "Car Parks",
+                "description": "Designated areas for the parking of vehicles"
+            },
+            {
+                "key": "Open home",
+                "description": "A set time when a property for sale can be viewed by potential buyers"
+            },
+            {
+                "key": "Time on the market",
+                "description": "The duration that a property has been listed for sale"
+            },
+            {
+                "key": "Decade built",
+                "description": "The decade during which a building was constructed"
+            },
+            {
+                "key": "Rating valuation",
+                "description": "An assessment of property value for taxation purposes"
+            },
+            {
+                "key": "Capital growth",
+                "description": "The increase in value of a property over time"
+            },
+            {
+                "key": "Exterior Material",
+                "description": "The materials used for the outside surface of a building"
+            },
+            {
+                "key": "Roof Material",
+                "description": "The materials used to construct the roof of a building"
+            },
+            {
+                "key": "AVM",
+                "description": "Automated Valuation Model, an estimate of a property's market value based on data analysis"
+            },
+            {
+                "key": "CV",
+                "description": "Council Valuation, the value of a property according to local government assessments"
+            },
+            {
+                "key": "IV",
+                "description": "Insurance Valuation, the value of a property for insurance purposes"
+            },
+            {
+                "key": "LV",
+                "description": "Land Valuation, the value of the land component of a property"
+            },
+            {
+                "key": "AgentPrice",
+                "description": "The price a real estate agent estimates a property could sell for"
+            },
+            {
+                "key": "Building concent",
+                "description": "Official permission required to build new structures or alter existing ones"
+            },
+            {
+                "key": "settlement date",
+                "description": "The date on which a property sale is finalized and ownership is transferred"
+            },
+            {
+                "key": "rent apprizeal",
+                "description": "An estimate of how much a property could be rented for"
+            },
+            {
+                "key": "legal description",
+                "description": "A formal description of a property that identifies it for legal purposes"
+            },
+            {
+                "key": "certificate tiitle",
+                "description": "A document that proves ownership of a property"
+            },
+            {
+                "key": "sale history",
+                "description": "The record of past transactions involving a particular property"
+            },
+            {
+                "key": "suburb avm median",
+                "description": "The median Automated Valuation Model value for properties in a suburb"
+            },
+            {
+                "key": "suburb avm median change",
+                "description": "The change in the median AVM value for a suburb over a period of time"
+            },
+            {
+                "key": "rent median price monthly",
+                "description": "The median price of rent for properties in an area per month"
+            },
+            {
+                "key": "rent median price quarter",
+                "description": "The median price of rent for properties in an area per quarter"
+            },
+            {
+                "key": "rent median price year",
+                "description": "The median price of rent for properties in an area per year"
+            },
+            {
+                "key": "estate description",
+                "description": "A detailed description of a property and its features"
+            },
+            {
+                "key": "contour",
+                "description": "Lines on a map which indicate elevation and the shape of the land"
+            },
+            {
+                "key": "Agent",
+                "description": "A person who acts on behalf of another, in particular a real estate agent who arranges the selling, renting, or management of properties"
+            }
+        ],
+        "gis_information_data": [
+            {
+                "key": "bus station",
+                "description": "A designated area where a bus stops for passengers to board or alight"
+            },
+            {
+                "key": "reserve",
+                "description": "Protected area preserved for wildlife, flora, fauna, and historical significance"
+            },
+            {
+                "key": "shopping",
+                "description": "Areas designated for purchasing goods, such as malls or shopping centers"
+            },
+            {
+                "key": "swimming pool",
+                "description": "A constructed basin filled with water for swimming or leisure activities"
+            },
+            {
+                "key": "cinema",
+                "description": "A theatre where movies are shown for public entertainment"
+            },
+            {
+                "key": "hospital",
+                "description": "An institution providing medical and surgical treatment and nursing care for the sick or injured"
+            },
+            {
+                "key": "police station",
+                "description": "A building where police officers work and detain people"
+            },
+            {
+                "key": "gas",
+                "description": "Stations where fuel for vehicles is sold"
+            },
+            {
+                "key": "density",
+                "description": "The number of buildings or inhabitants in a given area"
+            },
+            {
+                "key": "state housing",
+                "description": "Government-provided housing for individuals with low to moderate incomes"
+            },
+            {
+                "key": "neighbourhood ethinicity",
+                "description": "The predominant ethnic groups living in a neighborhood"
+            },
+            {
+                "key": "train station",
+                "description": "A terminal where trains load or unload passengers or goods"
+            },
+            {
+                "key": "ferry station",
+                "description": "A terminal where ferries load or unload passengers or vehicles"
+            },
+            {
+                "key": "flood plain",
+                "description": "An area of land adjacent to a river which is subject to flooding"
+            },
+            {
+                "key": "Unknown",
+                "description": "Information that is not known or has not been disclosed"
+            },
+            {
+                "key": "flood prone",
+                "description": "Areas that are susceptible to flooding"
+            },
+            {
+                "key": "flood sensitive",
+                "description": "Areas that are affected by flooding, often requiring special insurance or building regulations"
+            },
+            {
+                "key": "flow path",
+                "description": "The path that water takes during flooding"
+            },
+            {
+                "key": "zoning",
+                "description": "Legislation for the division of an area into zones in which certain land uses are permitted or prohibited"
+            },
+            {
+                "key": "School zone",
+                "description": "An area around a school with reduced speed limits and special traffic regulations"
+            },
+            {
+                "key": "waste water pipe",
+                "description": "Pipes that carry away sewage or liquid waste"
+            },
+            {
+                "key": "storm water pipe",
+                "description": "Pipes designed to carry rainwater away from urban areas"
+            },
+            {
+                "key": "water pipe",
+                "description": "Pipes that carry drinking water to homes and businesses"
+            }
+        ],
+        "image_information_data": [
+            {
+                "key": "Fence",
+                "description": "A barrier, railing, or other upright structure enclosing an area, typically outdoors, for security or privacy"
+            },
+            {
+                "key": "Trees",
+                "description": "Perennial plants with an elongated stem, or trunk, supporting branches and leaves"
+            },
+            {
+                "key": "Grass",
+                "description": "Vegetation consisting of typically short plants with long narrow leaves, growing wild or cultivated on lawns and pasture"
+            },
+            {
+                "key": "Asbestos",
+                "description": "A heat-resistant fibrous silicate mineral that can be woven into fabrics, and is used in fire-resistant and insulating materials"
+            },
+            {
+                "key": "Style",
+                "description": "The design or make of a particular item, in the context of property, it refers to the architectural design"
+            },
+            {
+                "key": "Slope",
+                "description": "A piece of ground that tends evenly upward or downward"
+            },
+            {
+                "key": "Driveway",
+                "description": "A short private road from the street to a house or garage, used by people who are driving to the house"
+            },
+            {
+                "key": "Ensuite",
+                "description": "A bathroom or toilet that is directly connected to a bedroom"
+            },
+            {
+                "key": "Laundary Room",
+                "description": "A room in a house where clothes are washed and dried"
+            },
+            {
+                "key": "Walkin Wardrobe",
+                "description": "A closet or a small room attached to a bedroom used for clothes storage"
+            },
+            {
+                "key": "Car Port",
+                "description": "A shelter for a car consisting of a roof supported on posts, built beside a house"
+            },
+            {
+                "key": "Exterial Colour",
+                "description": "The color on the outside of a structure"
+            },
+            {
+                "key": "Interial Colour",
+                "description": "The color on the inside of a structure"
+            },
+            {
+                "key": "Chimney",
+                "description": "A vertical channel or pipe which conducts smoke and combustion gases up from a fire or furnace and typically through the roof of a building"
+            },
+            {
+                "key": "Plaster Wall",
+                "description": "A wall coating made from cement, lime, sand, or gypsum, used to coat walls and ceilings"
+            },
+            {
+                "key": "Garage",
+                "description": "A building or indoor area for parking or storing motor vehicles"
+            }
+        ],
+        "invisible_information_data": [
+            {
+                "key": "home loan",
+                "description": "A sum of money borrowed from a financial institution to purchase a house"
+            },
+            {
+                "key": "good for kids",
+                "description": "An attribute of a property indicating that it has features suitable for children"
+            },
+            {
+                "key": "Family",
+                "description": "Refers to a living space that is designed to accommodate a group of people related by blood or law"
+            },
+            {
+                "key": "Elderly",
+                "description": "Suitability of a property for older individuals, possibly with accessibility features"
+            },
+            {
+                "key": "Privacy",
+                "description": "The state of being free from public attention within a property, often through strategic design or location"
+            },
+            {
+                "key": "safety",
+                "description": "The condition of being protected from or unlikely to cause danger, risk, or injury within a property"
+            },
+            {
+                "key": "Pet",
+                "description": "The allowance or suitability of a property for animals kept for companionship"
+            },
+            {
+                "key": "Storage",
+                "description": "The space or features within a property designed to store goods and items"
+            },
+            {
+                "key": "Ensuite",
+                "description": "A private bathroom attached to a bedroom"
+            },
+            {
+                "key": "subsection",
+                "description": "A division of a larger area, typically for administrative purposes within property development"
+            },
+            {
+                "key": "Garage",
+                "description": "A walled, roofed structure for storing a vehicle or vehicles, typically attached to or part of a house"
+            },
+            {
+                "key": "seaview",
+                "description": "A feature of a property that includes a view of the sea"
+            },
+            {
+                "key": "mountainview",
+                "description": "A feature of a property that includes a view of mountains"
+            },
+            {
+                "key": "cityview",
+                "description": "A feature of a property that includes a view of a cityscape"
+            }
+        ]
+    }
+}
