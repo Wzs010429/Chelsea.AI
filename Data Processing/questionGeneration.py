@@ -43,9 +43,10 @@ templates = {"rule": remove_spaces("""As a client preparing to buy or rent a pro
                                       2. The questions you ask should be specific to one house and do not require a comprehensive analysis of multiple listings. \
                                             For example, a comparison of two houses or a house recommendation with some characteristics are not considered to be questions about a single house.\
                                       3. Some basic information about this keyword may be mentioned in the description. The questions you ask must conform to the description and only be used appropriately. \
-                                      4. Your questions should be specifically about this property keyword, avoiding additional details like the address, and must be directly relevant to this property without diverging into unrelated or external topics.\
-                                      5. Your response should be in JSON format, containing nothing else but the json data. \
-                                      6. The JSON format should be as follows: {"keyword": str, "question_1": str, "question_2": str...}, and so on, where all key values are strings.""")}
+                                      4. The questions you raise should be real and natural enough and be issues that people in real life would care about. 、
+                                      5. Your questions should be specifically about this property keyword, avoiding additional details like the address, and must be directly relevant to this property without diverging into unrelated or external topics.\
+                                      6. Your response should be in JSON format, containing nothing else but the json data. \
+                                      7. The JSON format should be as follows: {"keyword": str, "question_1": str, "question_2": str...}, and so on, where all key values are strings.""")}
 
 
 def question_generation(keyword, description):
@@ -65,7 +66,7 @@ def question_generation(keyword, description):
 
 
 # Writing the questions to a CSV file
-with open('questions.csv', mode='w', newline='') as file:
+with open('questions_new.csv', mode='w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(["Class", "Keyword", "Question"])  # Writing the header
 
