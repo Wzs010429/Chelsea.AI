@@ -15,9 +15,9 @@ with open('issue.json', 'r') as file:
 keywords_list = []
 descriptions_list = []
 class_list = []
-for category in issue_data['Class'].values():
-    for item in category:
-        class_list.append(category)
+for class_name, categories in issue_data['Class'].items():
+    for item in categories:
+        class_list.append(class_name)  # Append the class name
         keywords_list.append(item['key'])
         descriptions_list.append(item['description'])
 
@@ -64,13 +64,15 @@ def question_generation(keyword, description):
       return None
 
 
+# Writing the questions to a CSV file
 with open('questions.csv', mode='w', newline='') as file:
-  writer = csv.writer(file)
-  writer.writerow(["Class", "Keyword", "Question"])  # Writing the header
+    writer = csv.writer(file)
+    writer.writerow(["Class", "Keyword", "Question"])  # Writing the header
 
-  # Writing questions for each keyword
-  for class_name, keyword, description in zip(class_list, keywords_list, descriptions_list):
-    questions = question_generation(keyword, description)
-    print(questions)
-    for i in range(1, 6):
-      writer.writerow([class_name, questions["keyword"], questions[f"question_{i}"]])
+    # Iterate over each class name, keyword, and description triple
+    for class_name, keyword, description in zip(class_list, keywords_list, descriptions_list):
+        questions = question_generation(keyword, description)
+        print(questions)
+        if questions:
+            for i in range(1, 6):
+                writer.writerow([class_name, questions.get("keyword", ""), questions.get(f"question_{i}", "")])
