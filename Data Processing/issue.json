@@ -43,257 +43,325 @@
             },
             {
                 "key": "Rating Valuation",
-                "description": "An assessment of property value for taxation purposes"
+                "description": "An assessment of property value for taxation purposes, measured in New Zealand dollars."
             },
             {
                 "key": "Capital Growth",
-                "description": "The increase in value of a property over time"
+                "description": "The increase in property value over time, measured as a percentage."
             },
             {
                 "key": "Exterior Material",
-                "description": "The materials used for the outside surface of a building"
+                "description": "The materials used for the outside surface of a building."
             },
             {
                 "key": "Roof Material",
-                "description": "The materials used to construct the roof of a building"
+                "description": "The materials used to construct the roof of a building."
             },
             {
                 "key": "AVM",
-                "description": "Automated Valuation Model, an estimate of a property's market value based on data analysis"
+                "description": "Automated Valuation Model, an estimate of a property's market value based on data analysis."
             },
             {
                 "key": "CV",
-                "description": "Council Valuation, the value of a property according to local government assessments"
+                "description": "Council Valuation, the value of a property according to local government assessments."
             },
             {
                 "key": "IV",
-                "description": "Insurance Valuation, the value of a property for insurance purposes"
+                "description": "Insurance Valuation, the value of a property for insurance purposes."
             },
             {
                 "key": "LV",
-                "description": "Land Valuation, the value of the land component of a property"
+                "description": "Land Valuation, the value of the land component of a property."
             },
             {
                 "key": "AgentPrice",
-                "description": "The price a real estate agent estimates a property could sell for"
+                "description": "Real estate agent's estimate of the selling price of the property, measured in New Zealand dollars."
             },
             {
                 "key": "Building Concent",
-                "description": "Official permission required to build new structures or alter existing ones"
+                "description": "Official permission required to build new structures or alter existing ones."
             },
             {
                 "key": "Settlement Date",
-                "description": "The date on which a property sale is finalized and ownership is transferred"
+                "description": "The date on which a property sale is finalized and ownership is transferred."
             },
             {
                 "key": "Rent Apprizeal",
-                "description": "An estimate of how much a property could be rented for"
+                "description": "An estimate of how much a property could be rented for."
             },
             {
                 "key": "Legal Description",
-                "description": "A formal description of a property that identifies it for legal purposes"
+                "description": "A formal description of a property that identifies it for legal purposes."
             },
             {
-                "key": "Certificate Tiitle",
-                "description": "A document that proves ownership of a property"
+                "key": "Certificate Tittle",
+                "description": "A document that proves ownership of a property."
             },
             {
                 "key": "Sale History",
-                "description": "The record of past transactions involving a particular property"
+                "description": "The record of past transactions involving a particular property."
             },
             {
                 "key": "Suburb AVM Median",
-                "description": "The median Automated Valuation Model value for properties in a suburb"
+                "description": "The median Automated Valuation Model value for properties in a suburb."
             },
             {
-                "key": "Suburb AVM Median change",
-                "description": "The change in the median AVM value for a suburb over a period of time"
+                "key": "Suburb AVM Median Change",
+                "description": "The change in the median AVM value for a suburb over a period of time."
             },
             {
                 "key": "Rent Median Price Monthly",
-                "description": "The median price of rent for properties in an area per month"
+                "description": "The median price of rent for properties in an area per month."
             },
             {
                 "key": "Rent Median Price Quarter",
-                "description": "The median price of rent for properties in an area per quarter"
+                "description": "The median price of rent for properties in an area per quarter."
             },
             {
                 "key": "Rent Median Price Year",
-                "description": "The median price of rent for properties in an area per year"
+                "description": "The median price of rent for properties in an area per year."
             },
             {
-                "key": "Estate Description",
-                "description": "A detailed description of a property and its features"
+                "key": "Real Estate Description",
+                "description": "A detailed narrative or summary of a property's characteristics, features, and conditions."
             },
             {
                 "key": "Contour",
-                "description": "Lines on a map which indicate elevation and the shape of the land"
+                "description": "Lines on a map which indicate elevation and the shape of the land."
             },
             {
                 "key": "Agent",
-                "description": "A person who acts on behalf of another, in particular a real estate agent who arranges the selling, renting, or management of properties"
+                "description": "A person who acts on behalf of another, in particular a real estate agent who arranges the selling, renting, or management of properties."
             }
         ],
         "gis_information_data": [
             {
                 "key": "Bus Station",
-                "description": "A designated area where a bus stops for passengers to board or alight"
+                "description": "A designated area where a bus stops for passengers to board or alight."
             },
             {
                 "key": "Reserve",
-                "description": "Protected area preserved for wildlife, flora, fauna, and historical significance"
+                "description": "A designated area set aside for a specific purpose, such as green space, community use, or wildlife conservation."
             },
             {
                 "key": "Shopping",
-                "description": "Areas designated for purchasing goods, such as malls or shopping centers"
+                "description": "Areas designated for purchasing goods, such as malls or shopping centers."
             },
             {
                 "key": "Swimming Pool",
-                "description": "A constructed basin filled with water for swimming or leisure activities"
+                "description": "A constructed basin filled with water for swimming or leisure activities."
             },
             {
                 "key": "Cinema",
-                "description": "A theatre where movies are shown for public entertainment"
+                "description": "A theatre where movies are shown for public entertainment."
             },
             {
                 "key": "Hospital",
-                "description": "An institution providing medical and surgical treatment and nursing care for the sick or injured"
+                "description": "An institution providing medical and surgical treatment and nursing care for the sick or injured."
             },
             {
                 "key": "Police Station",
-                "description": "A building where police officers work and detain people"
+                "description": "A building where police officers work and detain people."
             },
             {
                 "key": "Gas",
-                "description": "Stations where fuel for vehicles is sold"
+                "description": "Stations where fuel for vehicles is sold."
             },
             {
                 "key": "Density",
-                "description": "The number of buildings or inhabitants in a given area"
+                "description": "The number of buildings in a given area."
             },
             {
                 "key": "State Housing",
-                "description": "Government-provided housing for individuals with low to moderate incomes"
+                "description": "Government-provided housing for individuals with low to moderate incomes."
             },
             {
-                "key": "Neighbourhood Ethinicity",
-                "description": "The predominant ethnic groups living in a neighborhood"
+                "key": "Neighbourhood Ethnicity",
+                "description": "The predominant ethnic groups living in a neighborhood."
             },
             {
                 "key": "Train Station",
-                "description": "A terminal where trains load or unload passengers or goods"
+                "description": "A terminal where trains load or unload passengers or goods."
             },
             {
                 "key": "Ferry Station",
-                "description": "A terminal where ferries load or unload passengers or vehicles"
+                "description": "A terminal where ferries load or unload passengers or vehicles."
             },
             {
                 "key": "Flood Plain",
-                "description": "An area of land adjacent to a river which is subject to flooding"
+                "description": "An area of land adjacent to a river which is subject to flooding."
             },
             {
                 "key": "Flood Prone",
-                "description": "Areas that are susceptible to flooding"
+                "description": "Areas that are susceptible to flooding."
             },
             {
                 "key": "Flood Sensitive",
-                "description": "Areas that are affected by flooding, often requiring special insurance or building regulations"
+                "description": "Areas that are affected by flooding, often requiring special insurance or building regulations."
             },
             {
                 "key": "Flow Path",
-                "description": "The path that water takes during flooding"
+                "description": "The path that water takes during flooding."
             },
             {
                 "key": "Zoning",
-                "description": "Legislation for the division of an area into zones in which certain land uses are permitted or prohibited"
+                "description": "Legislation for the division of an area into zones in which certain land uses are permitted or prohibited."
             },
             {
                 "key": "School Zone",
-                "description": "An area around a school with reduced speed limits and special traffic regulations"
+                "description": "The designated area or district that determines the schools which residents' children are eligible to attend, significantly affecting property values."
             },
             {
                 "key": "Waste Water Pipe",
-                "description": "Pipes that carry away sewage or liquid waste"
+                "description": "Pipes that carry away sewage or liquid waste."
             },
             {
                 "key": "Storm Water Pipe",
-                "description": "Pipes designed to carry rainwater away from urban areas"
+                "description": "Pipes designed to carry rainwater away from urban areas."
             },
             {
                 "key": "Water Pipe",
-                "description": "Pipes that carry drinking water to homes and businesses"
+                "description": "Pipes that carry drinking water to homes and businesses."
+            },
+            {
+                "key": "Bar",
+                "description": "An establishment serving alcoholic beverages."
+            },
+            {
+                "key": "Cafe",
+                "description": "An establishment serving coffee, drinks, and light meals."
+            },
+            {
+                "key": "Restaurant",
+                "description": "A business that prepares and serves food and drinks to customers."
+            },
+            {
+                "key": "Population Density",
+                "description": "The number of people living per unit of area, such as per square mile or square kilometer."
+            },
+            {
+                "key": "Gym",
+                "description": "A facility equipped for physical exercise and fitness activities."
+            },
+            {
+                "key": "Pharmacy",
+                "description": "A place where prescription drugs are dispensed and medical advice is offered."
+            },
+            {
+                "key": "Age distribution",
+                "description": "The varying ages of residents in a property area, influencing housing demand and neighborhood characteristics."
+            },
+            {
+                "key": "Income Distribution",
+                "description": "The varying income levels of residents in an area, affecting property prices and market dynamics."
+            },
+            {
+                "key": "Ownership Distribution",
+                "description": "The spread of property ownership types and patterns within a specific area."
+            },
+            {
+                "key": "Average Time In The Home",
+                "description": "The typical duration homeowners reside in their property before moving."
+            },
+            {
+                "key": "Occupation Distribution",
+                "description": "The variety of job types held by residents in a specific area, influencing community composition and housing needs."
+            },
+            {
+                "key": "Occupancy",
+                "description": "The use or inhabitance of a property or space, often in terms of its capacity or number of occupants."
             }
         ],
         "image_information_data": [
             {
                 "key": "Fence",
-                "description": "A barrier, railing, or other upright structure enclosing an area, typically outdoors, for security or privacy"
+                "description": "A barrier, railing, or other upright structure enclosing an area, typically outdoors, for security or privacy."
             },
             {
                 "key": "Trees",
-                "description": "Perennial plants with an elongated stem, or trunk, supporting branches and leaves"
+                "description": "Mainly refer to whether there are large trees in the property’s yard."
             },
             {
                 "key": "Grass",
-                "description": "Vegetation consisting of typically short plants with long narrow leaves, growing wild or cultivated on lawns and pasture"
+                "description": "Mainly refers to whether there is lawn inside the property’s yard."
             },
             {
                 "key": "Asbestos",
-                "description": "A heat-resistant fibrous silicate mineral that can be woven into fabrics, and is used in fire-resistant and insulating materials"
+                "description": "A property with interior fillers containing asbestos is considered a bad property."
             },
             {
                 "key": "Style",
-                "description": "The design or make of a particular item, in the context of property, it refers to the architectural design"
+                "description": "Mainly refers to the decoration style of the house."
             },
             {
                 "key": "Slope",
-                "description": "A piece of ground that tends evenly upward or downward"
+                "description": "Mainly refers to whether there is a slope before and after the property, and whether it is located at the top or bottom of the slope."
             },
             {
                 "key": "Driveway",
-                "description": "A short private road from the street to a house or garage, used by people who are driving to the house"
+                "description": "A short private road from the street to a house or garage, used by people who are driving to the house."
             },
             {
                 "key": "Ensuite",
-                "description": "A bathroom or toilet that is directly connected to a bedroom"
+                "description": "A bathroom or toilet that is directly connected to a bedroom."
             },
             {
-                "key": "Laundary Room",
-                "description": "A room in a house where clothes are washed and dried"
+                "key": "Laundry Room",
+                "description": "A room in a house where clothes are washed and dried."
             },
             {
                 "key": "Walkin Wardrobe",
-                "description": "A closet or a small room attached to a bedroom used for clothes storage"
+                "description": "A closet or a small room attached to a bedroom used for clothes storage."
             },
             {
                 "key": "Car Port",
-                "description": "A shelter for a car consisting of a roof supported on posts, built beside a house"
+                "description": "A shelter for a car consisting of a roof supported on posts, built beside a house."
             },
             {
                 "key": "Exterial Colour",
-                "description": "The color on the outside of a structure"
+                "description": "The color on the outside of a property."
             },
             {
                 "key": "Interial Colour",
-                "description": "The color on the inside of a structure"
+                "description": "The color on the inside of a property."
             },
             {
                 "key": "Chimney",
-                "description": "A vertical channel or pipe which conducts smoke and combustion gases up from a fire or furnace and typically through the roof of a building"
+                "description": "A vertical channel or pipe which conducts smoke and combustion gases up from a fire or furnace and typically through the roof of a building.w"
             },
             {
                 "key": "Plaster Wall",
-                "description": "A wall coating made from cement, lime, sand, or gypsum, used to coat walls and ceilings"
+                "description": "A wall coating made from cement, lime, sand, or gypsum, used to coat walls and ceilings."
             },
             {
                 "key": "Garage",
-                "description": "A building or indoor area for parking or storing motor vehicles"
+                "description": "A building or indoor area for parking or storing motor vehicles."
+            },
+            {
+                "key": "Storage",
+                "description": "The space or features within a property designed to store goods and items."
+            },
+            {
+                "key": "Subsection",
+                "description": "A division of a larger area, typically for administrative purposes within property development."
+            },
+            {
+                "key": "Sea View",
+                "description": "A feature of a property that includes a view of the sea."
+            },
+            {
+                "key": "Mountain View",
+                "description": "A feature of a property that includes a view of mountains."
+            },
+            {
+                "key": "City View",
+                "description": "A feature of a property that includes a view of a cityscape."
             }
         ],
         "invisible_information_data": [
             {
                 "key": "Home Loan",
-                "description": "A sum of money borrowed from a financial institution to purchase a house"
+                "description": "A sum of money borrowed from a financial institution to purchase a house."
             },
             {
                 "key": "Good For Kids",
@@ -301,47 +369,23 @@
             },
             {
                 "key": "Family",
-                "description": "Refers to a living space that is designed to accommodate a group of people related by blood or law"
+                "description": "Refers to a living space that is designed to accommodate a family."
             },
             {
                 "key": "Elderly",
-                "description": "Suitability of a property for older individuals, possibly with accessibility features"
+                "description": "Suitability of a property for older individuals, possibly with accessibility features."
             },
             {
                 "key": "Privacy",
-                "description": "The state of being free from public attention within a property, often through strategic design or location"
+                "description": "The location of the property makes it difficult for outsiders to notice what is going on inside."
             },
             {
                 "key": "Safety",
-                "description": "The condition of being protected from or unlikely to cause danger, risk, or injury within a property"
+                "description": "The condition of being protected from or unlikely to cause danger, risk, or injury within a property."
             },
             {
                 "key": "Pet",
-                "description": "The allowance or suitability of a property for animals kept for companionship"
-            },
-            {
-                "key": "Storage",
-                "description": "The space or features within a property designed to store goods and items"
-            },
-            {
-                "key": "Ensuite",
-                "description": "A private bathroom attached to a bedroom"
-            },
-            {
-                "key": "Subsection",
-                "description": "A division of a larger area, typically for administrative purposes within property development"
-            },
-            {
-                "key": "Sea View",
-                "description": "A feature of a property that includes a view of the sea"
-            },
-            {
-                "key": "Mountain View",
-                "description": "A feature of a property that includes a view of mountains"
-            },
-            {
-                "key": "City View",
-                "description": "A feature of a property that includes a view of a cityscape"
+                "description": "The property is pet-friendly and has living space for pets."
             }
         ]
     }
