@@ -3,54 +3,50 @@
         "basic_information_data": [
             {
                 "key": "Bedroom",
-                "description": "A room within a dwelling intended primarily for sleeping"
+                "description": "Concerns regarding the number and size of bedrooms in a property."
             },
             {
                 "key": "Bathroom",
-                "description": "A room containing a bathtub or shower and typically also a toilet"
+                "description": "Concerns involving bathroom design, size, and functionality in properties."
             },
             {
-                "key": "Property types",
-                "description": "Categories of real estate such as residential, commercial, or industrial"
+                "key": "Property Types",
+                "description": "Concerns related to identifying and categorizing different types of properties, such as House, Apartment, Studio, Townhouse, Unit, Home & Income, LifeStyle Property and Lifestyle Section."
             },
             {
-                "key": "Type of title",
-                "description": "The legal documentation proving ownership of a property, such as freehold or leasehold"
+                "key": "Type Of Title",
+                "description": "The legal documentation proving ownership of a property, such as freehold, leasehold, cross lease and Unit."
             },
             {
-                "key": "Selling method",
-                "description": "The strategy used to sell property, including auction, private treaty, or expression of interest"
+                "key": "Selling Method",
+                "description": "The strategy used to sell property, including auction, POA, Set date of sale, Asking price, by negotiation, tender, deadline treaty or others."
             },
             {
-                "key": "Floor area",
-                "description": "The total usable surface area within a building, measured in square feet or meters"
+                "key": "Floor Area",
+                "description": "The total usable surface area within a building, measured in square meters."
             },
             {
-                "key": "Land area",
-                "description": "The measure of a plot of land surface"
+                "key": "Land Area",
+                "description": "The measure of a plot of land surface, measured in square meters."
             },
             {
-                "key": "Car Parks",
-                "description": "Designated areas for the parking of vehicles"
+                "key": "Open Home",
+                "description": "A set time when a property for sale can be viewed by potential buyers."
             },
             {
-                "key": "Open home",
-                "description": "A set time when a property for sale can be viewed by potential buyers"
+                "key": "Time On The Market",
+                "description": "The duration that a property has been listed for sale, such as 1 month or 3 months+ and so on."
             },
             {
-                "key": "Time on the market",
-                "description": "The duration that a property has been listed for sale"
+                "key": "Decade Built",
+                "description": "The decade during which a building was constructed, such as 60s, 70s and so on."
             },
             {
-                "key": "Decade built",
-                "description": "The decade during which a building was constructed"
-            },
-            {
-                "key": "Rating valuation",
+                "key": "Rating Valuation",
                 "description": "An assessment of property value for taxation purposes"
             },
             {
-                "key": "Capital growth",
+                "key": "Capital Growth",
                 "description": "The increase in value of a property over time"
             },
             {
@@ -82,55 +78,55 @@
                 "description": "The price a real estate agent estimates a property could sell for"
             },
             {
-                "key": "Building concent",
+                "key": "Building Concent",
                 "description": "Official permission required to build new structures or alter existing ones"
             },
             {
-                "key": "settlement date",
+                "key": "Settlement Date",
                 "description": "The date on which a property sale is finalized and ownership is transferred"
             },
             {
-                "key": "rent apprizeal",
+                "key": "Rent Apprizeal",
                 "description": "An estimate of how much a property could be rented for"
             },
             {
-                "key": "legal description",
+                "key": "Legal Description",
                 "description": "A formal description of a property that identifies it for legal purposes"
             },
             {
-                "key": "certificate tiitle",
+                "key": "Certificate Tiitle",
                 "description": "A document that proves ownership of a property"
             },
             {
-                "key": "sale history",
+                "key": "Sale History",
                 "description": "The record of past transactions involving a particular property"
             },
             {
-                "key": "suburb avm median",
+                "key": "Suburb AVM Median",
                 "description": "The median Automated Valuation Model value for properties in a suburb"
             },
             {
-                "key": "suburb avm median change",
+                "key": "Suburb AVM Median change",
                 "description": "The change in the median AVM value for a suburb over a period of time"
             },
             {
-                "key": "rent median price monthly",
+                "key": "Rent Median Price Monthly",
                 "description": "The median price of rent for properties in an area per month"
             },
             {
-                "key": "rent median price quarter",
+                "key": "Rent Median Price Quarter",
                 "description": "The median price of rent for properties in an area per quarter"
             },
             {
-                "key": "rent median price year",
+                "key": "Rent Median Price Year",
                 "description": "The median price of rent for properties in an area per year"
             },
             {
-                "key": "estate description",
+                "key": "Estate Description",
                 "description": "A detailed description of a property and its features"
             },
             {
-                "key": "contour",
+                "key": "Contour",
                 "description": "Lines on a map which indicate elevation and the shape of the land"
             },
             {
@@ -140,95 +136,91 @@
         ],
         "gis_information_data": [
             {
-                "key": "bus station",
+                "key": "Bus Station",
                 "description": "A designated area where a bus stops for passengers to board or alight"
             },
             {
-                "key": "reserve",
+                "key": "Reserve",
                 "description": "Protected area preserved for wildlife, flora, fauna, and historical significance"
             },
             {
-                "key": "shopping",
+                "key": "Shopping",
                 "description": "Areas designated for purchasing goods, such as malls or shopping centers"
             },
             {
-                "key": "swimming pool",
+                "key": "Swimming Pool",
                 "description": "A constructed basin filled with water for swimming or leisure activities"
             },
             {
-                "key": "cinema",
+                "key": "Cinema",
                 "description": "A theatre where movies are shown for public entertainment"
             },
             {
-                "key": "hospital",
+                "key": "Hospital",
                 "description": "An institution providing medical and surgical treatment and nursing care for the sick or injured"
             },
             {
-                "key": "police station",
+                "key": "Police Station",
                 "description": "A building where police officers work and detain people"
             },
             {
-                "key": "gas",
+                "key": "Gas",
                 "description": "Stations where fuel for vehicles is sold"
             },
             {
-                "key": "density",
+                "key": "Density",
                 "description": "The number of buildings or inhabitants in a given area"
             },
             {
-                "key": "state housing",
+                "key": "State Housing",
                 "description": "Government-provided housing for individuals with low to moderate incomes"
             },
             {
-                "key": "neighbourhood ethinicity",
+                "key": "Neighbourhood Ethinicity",
                 "description": "The predominant ethnic groups living in a neighborhood"
             },
             {
-                "key": "train station",
+                "key": "Train Station",
                 "description": "A terminal where trains load or unload passengers or goods"
             },
             {
-                "key": "ferry station",
+                "key": "Ferry Station",
                 "description": "A terminal where ferries load or unload passengers or vehicles"
             },
             {
-                "key": "flood plain",
+                "key": "Flood Plain",
                 "description": "An area of land adjacent to a river which is subject to flooding"
             },
             {
-                "key": "Unknown",
-                "description": "Information that is not known or has not been disclosed"
-            },
-            {
-                "key": "flood prone",
+                "key": "Flood Prone",
                 "description": "Areas that are susceptible to flooding"
             },
             {
-                "key": "flood sensitive",
+                "key": "Flood Sensitive",
                 "description": "Areas that are affected by flooding, often requiring special insurance or building regulations"
             },
             {
-                "key": "flow path",
+                "key": "Flow Path",
                 "description": "The path that water takes during flooding"
             },
             {
-                "key": "zoning",
+                "key": "Zoning",
                 "description": "Legislation for the division of an area into zones in which certain land uses are permitted or prohibited"
             },
             {
-                "key": "School zone",
+                "key": "School Zone",
                 "description": "An area around a school with reduced speed limits and special traffic regulations"
             },
             {
-                "key": "waste water pipe",
+                "key": "Waste Water Pipe",
                 "description": "Pipes that carry away sewage or liquid waste"
             },
             {
-                "key": "storm water pipe",
+                "key": "Storm Water Pipe",
                 "description": "Pipes designed to carry rainwater away from urban areas"
             },
             {
-                "key": "water pipe",
+                "key": "Water Pipe",
                 "description": "Pipes that carry drinking water to homes and businesses"
             }
         ],
@@ -300,11 +292,11 @@
         ],
         "invisible_information_data": [
             {
-                "key": "home loan",
+                "key": "Home Loan",
                 "description": "A sum of money borrowed from a financial institution to purchase a house"
             },
             {
-                "key": "good for kids",
+                "key": "Good For Kids",
                 "description": "An attribute of a property indicating that it has features suitable for children"
             },
             {
@@ -320,7 +312,7 @@
                 "description": "The state of being free from public attention within a property, often through strategic design or location"
             },
             {
-                "key": "safety",
+                "key": "Safety",
                 "description": "The condition of being protected from or unlikely to cause danger, risk, or injury within a property"
             },
             {
@@ -336,23 +328,19 @@
                 "description": "A private bathroom attached to a bedroom"
             },
             {
-                "key": "subsection",
+                "key": "Subsection",
                 "description": "A division of a larger area, typically for administrative purposes within property development"
             },
             {
-                "key": "Garage",
-                "description": "A walled, roofed structure for storing a vehicle or vehicles, typically attached to or part of a house"
-            },
-            {
-                "key": "seaview",
+                "key": "Sea View",
                 "description": "A feature of a property that includes a view of the sea"
             },
             {
-                "key": "mountainview",
+                "key": "Mountain View",
                 "description": "A feature of a property that includes a view of mountains"
             },
             {
-                "key": "cityview",
+                "key": "City View",
                 "description": "A feature of a property that includes a view of a cityscape"
             }
         ]
