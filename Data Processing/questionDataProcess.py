@@ -3,7 +3,7 @@ import pandas as pd
 def sort_and_save_csv(file_path):
     # Read the CSV file into a DataFrame
     df = pd.read_csv(file_path)
-
+    df = df.drop_duplicates(subset='Question', keep='first')
     # Sorting the DataFrame first by 'Class' and then by 'Keyword'
     sorted_df = df.sort_values(by=['Class', 'Keyword'])
 
