@@ -71,6 +71,8 @@ import json
 import random
 import string
 
+
+
 # Function to generate a random string of specified length
 def random_string(length=8):
     return ''.join(random.choice(string.ascii_letters) for _ in range(length))
@@ -79,19 +81,19 @@ def random_string(length=8):
 def create_property():
     return {
         "PropertyID": random_string(),
-        "Issue": random.sample(issues, random.randint(1, 15))
+        "Issue": random.sample(issues, random.randint(6, 15))  # 选择6到15个问题
     }
 
 # Function to create a single user data entry
 def create_user_data():
     return {
         "UserID": random_string(),
-        "Property": [create_property() for _ in range(random.randint(1, 5))],
-        "Conversation": random.sample(issues, random.randint(10, 15))
+        "Property": [create_property() for _ in range(random.randint(1, 5))],  # 每个用户有1到5个属性
+        "Conversation": random.sample(issues, random.randint(6, 15))  # 选择6到15个问题
     }
 
 # Create a dataset with a few user data entries
-data = [create_user_data() for _ in range(20)]
+data = [create_user_data() for _ in range(5000)]  # 创建5000个用户数据
 
 file_path = 'fake_data.json'
 with open(file_path, 'w') as file:
