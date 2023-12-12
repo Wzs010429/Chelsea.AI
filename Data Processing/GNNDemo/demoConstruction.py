@@ -1,68 +1,103 @@
 import torch
-from torch_geometric.data import Data
+import torch.nn.functional as F
 from torch_geometric.nn import GCNConv
-from tqdm import tqdm  # 导入tqdm
-import matplotlib.pyplot as plt
+from collections import defaultdict
+import json
+from torch_geometric.data import Data
+
+# 读取JSON文件
+with open('fake_data.json', 'r') as file:
+    data_json = json.load(file)
+
+# 为UserID和PropertyID创建映射
+node_mapping = {}
+node_counter = 0
+edge_list = []
+
+for entry in data_json:
+    user_id = entry["UserID"]
+    if user_id not in node_mapping:
+        node_mapping[user_id] = node_counter
+        node_counter += 1
+
+    for issue in entry["Conversation"]:
+        if issue not in node_mapping:
+            node_mapping[issue] = node_counter
+            node_counter += 1
+
+        edge_list.append([node_mapping[user_id], node_mapping[issue]])
+
+# 创建边索引
+edge_index = torch.tensor(edge_list, dtype=torch.long).t().contiguous()
+
+# 创建节点特征（这里使用简单的one-hot编码）
+num_nodes = len(node_mapping)
+x = torch.eye(num_nodes)
+
+# 构建图数据对象
+data = Data(x=x, edge_index=edge_index)
+
+# print(data)
 
 class GCN(torch.nn.Module):
-    def __init__(self, num_node_features, num_classes):
+    def __init__(self, num_features, hidden_channels):
         super(GCN, self).__init__()
-        self.conv1 = GCNConv(num_node_features, 16)
-        self.conv2 = GCNConv(16, num_classes)
+        self.conv1 = GCNConv(num_features, hidden_channels)
+        self.conv2 = GCNConv(hidden_channels, hidden_channels)
+        self.out = torch.nn.Linear(hidden_channels, 1)
 
-    def forward(self, data):
-        x, edge_index = data.x, data.edge_index
-
+    def forward(self, x, edge_index):
         x = self.conv1(x, edge_index)
-        x = torch.relu(x)
+        x = F.relu(x)
         x = self.conv2(x, edge_index)
+        x = F.relu(x)
+        x = self.out(x)
+        return torch.sigmoid(x)
 
-        return torch.log_softmax(x, dim=1)
+device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+model = GCN(num_features=data.num_features, hidden_channels=64).to(device)
+data = data.to(device)
+optimizer = torch.optim.Adam(model.parameters(), lr=0.01, weight_decay=5e-4)
 
-# 假设有4个节点，每个节点有3个特征
-x = torch.tensor([[1, 2, 3], [4, 5, 6], [7, 8, 9], [10, 11, 12]], dtype=torch.float)
+# 定义二元交叉熵损失函数
+criterion = torch.nn.BCELoss()
 
-# 边索引
-edge_index = torch.tensor([[0, 1, 2, 3, 0], [1, 2, 3, 0, 2]], dtype=torch.long)
 
-# 节点标签
-labels = torch.tensor([0, 1, 0, 1], dtype=torch.long)
-
-# 假设我们将前两个节点用于训练，后两个用于测试
-train_mask = torch.tensor([True, True, False, False], dtype=torch.bool)
-
-# 更新Data对象以包含train_mask
-data = Data(x=x, edge_index=edge_index, y=labels, train_mask=train_mask)
-
-# 创建模型实例
-model = GCN(num_node_features=3, num_classes=2)
-
-# 定义损失函数和优化器
-criterion = torch.nn.CrossEntropyLoss()
-optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
-
-# 初始化用于记录训练损失的列表
-loss_values = []
-
-# 训练模型
-for epoch in tqdm(range(200), desc="Training Progress"):
+model.train()
+for epoch in range(200):
     optimizer.zero_grad()
-    out = model(data)
-    loss = criterion(out[data.train_mask], data.y[data.train_mask])
+    out = model(data.x, data.edge_index)
+    # 计算损失，假设data.y是边存在与否的标签
+    loss = criterion(out[data.edge_index], data.y)
     loss.backward()
     optimizer.step()
 
-    # 记录损失值
-    loss_values.append(loss.item())
 
-    # 打印损失值
-    if (epoch + 1) % 10 == 0:  # 每10个epoch打印一次
-        print(f'Epoch {epoch + 1}/{200}, Loss: {loss.item()}')
+model.eval()
+with torch.no_grad():
+    edge_predictions = model(data.x, data.edge_index)
 
-# 绘制损失曲线
-plt.plot(loss_values, label='Training Loss')
-plt.xlabel('Epoch')
-plt.ylabel('Loss')
-plt.title('Training Loss Over Time')
-plt.legend()
-plt.show()
+# edge_predictions 包含了每条边的预测权重或概率
+
+# 将预测转换为用户和问题的映射
+user_issue_predictions = defaultdict(list)
+for i, edge in enumerate(data.edge_index.t()):
+    user_idx, issue_idx = edge.numpy()
+    prediction = edge_predictions[i].item()
+    user_issue_predictions[user_idx].append((issue_idx, prediction))
+
+# 为每个用户选出前5个问题
+top_5_issues_per_user = {}
+for user_idx, predictions in user_issue_predictions.items():
+    # 根据预测的权重或概率排序
+    sorted_issues = sorted(predictions, key=lambda x: x[1], reverse=True)
+    # 选择前5个
+    top_5_issues = sorted_issues[:5]
+    # 存储结果
+    top_5_issues_per_user[user_idx] = top_5_issues
+
+# 输出每个用户的前5个问题
+for user_idx, issues in top_5_issues_per_user.items():
+    print(f"User {user_idx}:")
+    for issue_idx, prediction in issues:
+        print(f"  Issue {issue_idx} with prediction score: {prediction}")

@@ -51,7 +51,7 @@
 #     }
 # }
 
-issue = ['Bus Stop', 'Ferry Station', 'Hospital', 'Police Station', 'School Zone', 'Train Station', 'City View', 'Fence',
+issues = ['Bus Stop', 'Ferry Station', 'Hospital', 'Police Station', 'School Zone', 'Train Station', 'City View', 'Fence',
          'Grass', 'Mountain View', 'Sea View', 'Trees', 'Agent', 'Capital Growth', 'Contour', 'Decade Built', 'Floor Area',
          'Land Area', 'Open Home', 'Property Types', 'Rating Valuation', 'Rent Appraisal', 'Sale History', 'Selling Method',
          'Settlement Date', 'Subsection', 'Time On The Market', 'Type Of Title', 'Bar', 'Cafe', 'Cinema', 'Gas', 'Gym',
@@ -65,3 +65,34 @@ issue = ['Bus Stop', 'Ferry Station', 'Hospital', 'Police Station', 'School Zone
          'Building Consent', 'Certificate Title', 'Legal Description', 'State Housing', 'AVM', 'AgentPrice', 'Council Valuation',
          'Insurance Valuation', 'Land Valuation', 'Real Estate Description', 'Rent Median Price Monthly', 'Rent Median Price Quarter',
          'Rent Median Price Year', 'Suburb AVM Median', 'Suburb AVM Median Change', 'Elderly', 'Family', 'Good For Kids', 'Pet', 'Privacy', 'Safety']
+
+
+import json
+import random
+import string
+
+# Function to generate a random string of specified length
+def random_string(length=8):
+    return ''.join(random.choice(string.ascii_letters) for _ in range(length))
+
+# Function to create a single property entry
+def create_property():
+    return {
+        "PropertyID": random_string(),
+        "Issue": random.sample(issues, random.randint(1, 15))
+    }
+
+# Function to create a single user data entry
+def create_user_data():
+    return {
+        "UserID": random_string(),
+        "Property": [create_property() for _ in range(random.randint(1, 5))],
+        "Conversation": random.sample(issues, random.randint(10, 15))
+    }
+
+# Create a dataset with a few user data entries
+data = [create_user_data() for _ in range(20)]
+
+file_path = 'fake_data.json'
+with open(file_path, 'w') as file:
+    json.dump(data, file, indent=4)
