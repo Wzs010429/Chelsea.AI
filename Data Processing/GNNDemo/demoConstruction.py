@@ -50,7 +50,7 @@ x = torch.eye(len(node_mapping))
 
 # 构建图数据对象
 data = Data(x=x, edge_index=edge_index, y=edge_labels)
-
+print(data)
 # 定义GCN模型
 class GCN(torch.nn.Module):
     def __init__(self, num_features, hidden_channels):
