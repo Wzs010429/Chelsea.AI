@@ -18,12 +18,11 @@ def remove_spaces(text):
 
 
 try:
-    with open('property2.txt', 'r') as file:
+    with open('property2.json', 'r') as file:
         data = json.load(file)
     # If successful, print a message indicating the JSON was loaded correctly
         print(f"JSON data loaded successfully.")
         # print(data)
-
 except json.JSONDecodeError as e:
     # If there is a JSON format error, print the error message
         print(f"Error decoding JSON: {e}")
@@ -51,80 +50,87 @@ def answer_generation(data, question):
   return completion.choices[0].message["content"]
 
 
-# # 打开新的CSV文件进行写入
-# with open('QA_new.csv', mode='w', newline='', encoding='utf-8') as output_csvfile:
-#     writer = csv.writer(output_csvfile)
+# Iterate over each item in data
+for index, d in enumerate(data):
+    output_filename = f'QA_new_{index}.csv'  # Unique filename for each data item
+    with open(output_filename, mode='w', newline='', encoding='utf-8') as output_csvfile:
+        writer = csv.writer(output_csvfile)
+        writer.writerow(['Class', 'Issue', 'Question', 'Answer'])
+
+        with open('Question.csv', newline='', encoding='utf-8') as input_csvfile:
+            reader = csv.DictReader(input_csvfile)
+            for row in reader:
+                question = row['Question']
+                answer = answer_generation(d, question)
+                writer.writerow([row['Class'], row['Issue'], question, answer])
+                print(f"Answer generated for {output_filename}: {row['Question']}")
+
+
+# question_list = ["How close is the nearest hospital to this property, and can you please provide its name and distance?",
+# "Is the property located within an area that has a good response time for medical emergencies due to the proximity of a hospital?",
+# "Does the presence of a nearby hospital affect the noise levels at this property, for instance, with ambulance sirens?",
+# "Are there any specialist medical facilities, like a children__ hospital or a cardiac center, available at the nearby hospital?",
+# "How would you describe the traffic conditions between the property and the nearest hospital during peak hours?",
+# "How close is the nearest hospital to the property, and can you provide the name of the institution?",
+# "Is the property within a certain radius of a hospital for potential emergency situations?",
+# "Does the vicinity of the hospital to the property have any impact on the local traffic and noise levels?",
+# "Are there any specialized medical facilities, like a children's hospital or cardiac center, near the property?",
+# "Does the proximity to the hospital affect the property's insurance rates or resale value?"]
 #
-#     # 写入新CSV文件的表头
-#     writer.writerow(['Class', 'Issue', 'Question', 'Answer'])
-#     # 遍历每个data元素
-#     for d in data:
-#         # 读取原始CSV文件
-#         with open('Question.csv', newline='', encoding='utf-8') as input_csvfile:
-#             questionNo = 0
-#             reader = csv.DictReader(input_csvfile)
+# data = """
+# ## 4D/250 Richmond Road, Grey Lynn: Hospital Information
 #
-#             # 对于每个问题，生成答案并写入新CSV文件
-#             for row in reader:
-#                 question = row['Question']
-#                 answer = answer_generation(d, question)
-#                 writer.writerow([row['Class'], row['Issue'], question, answer])
-#                 questionNo += 1
-#                 print(f"Question {questionNo}: Answer generated.")
-
-
-question_list = ["Can you provide a detailed sale history of this property, including dates and sale prices?",
-                    "How many times has this property changed hands in the past 20 years?",
-                    "Were there any significant fluctuations in the sale price of this property during its history?",
-                    "What can you tell me about the duration of ownership between each sale of this property?",
-                    "Does the sale history of this property show any distressed sales, such as foreclosures or short sales?",
-                    "Can you provide a detailed sale history of the property, including dates and sale prices of past transactions?",
-                    "Has the property been frequently bought and sold in the past, and if so, can you explain any reasons for this high turnover?",
-                    "Are there any notable trends or irregularities in the property's sale history that might impact its current valuation?",
-                    "Does the sale history of this house reveal any foreclosures or short sales that could affect my potential purchase?"]
-
-data = [{
-          "property_id": "NZ01103666/4D",
-          "sale_id": "20159316",
-          "sale_date": "2012-04-04",
-          "sale_price_gross": "258000",
-          "agree_date": "2012-04-04",
-          "sale_type": "Whole - Freehold market level",
-          "sale_price_chattels": "null"
-        }, {
-          "property_id": "NZ01103666/4D",
-          "sale_id": "20205959",
-          "sale_date": "2014-02-05",
-          "sale_price_gross": "335000",
-          "agree_date": "2014-02-05",
-          "sale_type": "Whole - Freehold market level",
-          "sale_price_chattels": "null"
-        }, {
-          "property_id": "NZ01103666/4D",
-          "sale_id": "20460197",
-          "sale_date": "2002-08-12",
-          "sale_price_gross": "174000",
-          "agree_date": "2002-08-12",
-          "sale_type": "Whole - Freehold market level",
-          "sale_price_chattels": "5000"
-        }, {
-          "property_id": "NZ01103666/4D",
-          "sale_id": "20720738",
-          "sale_date": "2006-03-21",
-          "sale_price_gross": "240000",
-          "agree_date": "2006-03-21",
-          "sale_type": "Whole - Freehold market level",
-          "sale_price_chattels": "8000"
-        }, {
-          "property_id": "NZ01103666/4D",
-          "sale_id": "24553089",
-          "sale_date": "2017-10-02",
-          "sale_price_gross": "250000",
-          "agree_date": "2017-10-02",
-          "sale_type": "Whole - Freehold market level",
-          "sale_price_chattels": "8000"
-        }]
-
-
-for question in question_list:
-    print(answer_generation(data, question))
+# **Nearest Hospital:**
+#
+# * The nearest major hospital to 4D/250 Richmond Road is **Auckland City Hospital**. It's located about 3.6 kilometers away, across the Waitematā Harbour.
+#
+# [Image of Auckland City Hospital, Auckland]
+#
+# * There's also the smaller **Westmere Medical Centre** within 1.5 kilometers, offering more limited services.
+#
+# [Image of Westmere Medical Centre, Auckland]
+#
+# **Response Time:**
+#
+# * While Auckland City Hospital is further away, it's a large, well-equipped facility with good ambulance response times.
+# * Westmere Medical Centre might be quicker to reach for non-emergencies.
+#
+# **Noise Levels:**
+#
+# * Richmond Road itself can be relatively busy, with some traffic noise, especially during peak hours.
+# * Being on a side street off Richmond Road could provide some noise buffer.
+#
+# **Specialist Facilities:**
+#
+# * Auckland City Hospital offers a wide range of specialist services, including a dedicated children's ward and a cardiac center.
+# * Westmere Medical Centre provides more basic care and can refer patients to specialists at Auckland City Hospital if needed.
+#
+# **Traffic:**
+#
+# * Richmond Road can be congested during peak hours, especially near Ponsonby Road.
+# * Consider alternative routes or public transport during rush hour.
+#
+# **Additional Information:**
+#
+# * To get a better understanding of the specific noise levels and traffic conditions around 4D/250 Richmond Road, you can check online noise maps and traffic websites.
+# * You can also contact the local council or real estate agent for more information about the property and the surrounding area.
+#
+# I hope this information is helpful! Let me know if you have any other questions.
+#
+# **Regarding your specific questions:**
+#
+# 1. **Nearest Hospital:** Auckland City Hospital (3.6 km)
+# 2. **Response Time:** Good overall, with Westmere Medical Centre offering a closer option for non-emergencies.
+# 3. **Noise Levels:** Some traffic noise from Richmond Road, but less likely on the side street.
+# 4. **Specialist Facilities:** Yes, at Auckland City Hospital (children's ward, cardiac center, and more).
+# 5. **Peak Hour Traffic:** Congested on Richmond Road, consider alternatives.
+# 6. **Radius for Emergencies:** Within reasonable reach of both Auckland City Hospital and Westmere Medical Centre.
+# 7. **Impact on Traffic/Noise:** No significant impact from hospital itself.
+# 8. **Specialized Facilities Nearby:** Yes, as mentioned (children's ward, cardiac center).
+# 9. **Impact on Insurance/Resale Value:** Proximity to reputable hospitals can be a positive factor, but insurance rates and resale value depend on various factors.
+#
+# """
+#
+#
+# for question in question_list:
+#     print(answer_generation(data, question))
